@@ -1,0 +1,49 @@
+{
+    "name": "html-extract-plugin",
+    "displayName": "html-extract-plugin",
+    "description": "extract html structure to css content",
+    "version": "0.0.3",
+    "publisher": "misanya",
+    "engines": {
+        "vscode": "^1.27.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "icon": "images/melon.png",
+    "repository": {
+        "type": "git",
+        "url": "http://git.bilibili.co/liushengxian/html-extract-plugin.git"
+    },
+    "activationEvents": [
+        "onCommand:extension.sayHello",
+        "onCommand:extension.extractHtml"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.sayHello",
+                "title": "Hello World"
+            },
+            {
+                "command": "extension.extractHtml",
+                "title": "Extract Html"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.21",
+        "eslint": "^4.11.0",
+        "@types/node": "^8.10.25",
+        "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "jsdom": "^12.0.0"
+    }
+}
